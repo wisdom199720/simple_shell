@@ -11,7 +11,9 @@ int execute(char **parse)
 	pid_t pid;
 	int status;
 
-	pid = fork();if (pid == 0)
+	pid = fork();
+
+	if (pid == 0)
 	{
 		if (execve(parse[0], parse, NULL) == -1)
 		{
