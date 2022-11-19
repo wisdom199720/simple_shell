@@ -76,8 +76,9 @@ ssize_t get_input(info_t *info)
 		if (i >= len)
 		{
 			i = len = 0;
-			nfo->cmd_buf_type = CMD_NORM;
+			info->cmd_buf_type = CMD_NORM;
 		}
+
 		*buf_p = p;
 		return (_strlen(p));
 	}
